@@ -6,8 +6,9 @@ router.post('/registre',userCt.register)
 router.post('/login',userCt.login)
 router.get('/logout',userCt.logout)
 router.get('/refresh_token',userCt.refreshToken)
+router.patch('/addcart', auth, userCt.addCart)
 
-
+router.get('/history', auth, userCt.history)
 router.get('/info',auth,userCt.getUser)
 
 module.exports=router
